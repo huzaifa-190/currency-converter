@@ -40,17 +40,17 @@ export default function CurrencyConverter() {
         }
       }
     >
-      <div className="flex h-[600px] w-[800px] items-center justify-center  ">
+      {/* <div className="flex h-[600px] w-[60%] md:w-[70%] items-center justify-center  bg-red-300"> */}
         <div
-          className="h-[550px] w-[750px] flex flex-col items-center bg-white rounded-sm pt-8 border border-white 
+          className="h-[100%] lg:h-[550px] w-[100%] lg:w-[60%] flex flex-col gap-14 md:gap-8 items-center bg-white rounded-sm pt-8 border border-white 
           hover:-translate-y-2 transition-all duration-300 ease-linear 
                 "
         >
-          <h1 className="text-4xl text-blue-900  font-extrabold font-ubuntu hover:cursor-pointer">
+          <h1 className=" text-3xl xs:text-4xl text-blue-900  font-extrabold font-ubuntu hover:cursor-pointer">
             Currency CoNverter
           </h1>
 
-          <div className="flex flex-row w-full h-32 mt-4 items-center justify-center">
+          <div className="flex flex-col md:flex-row w-full h-full md:h-32 mt-4 items-center justify-center">
             <div className="flex flex-col mx-6 ">
               <h4 className="text-gray-600 font-bold m-2">From</h4>
               <CountryDropDown
@@ -87,18 +87,18 @@ export default function CurrencyConverter() {
           </div>
 
           {/* Inputs container div */}
-          <div className="flex flex-row w-full h-32 mt-1 items-center justify-center ">
+          <div className="flex flex-row w-[80%] h-32 mt-1 items-center justify-center  ">
             <input
               type="number"
               placeholder="Amount"
-              className="h-24 w-80 bg-transparent mr-6 text-3xl text-gray-600 font-bold px-4 border-b-2 focus:outline-none "
+              className="h-24 w-[70%] bg-transparent mr-6  xs:text-2xl sm:text-3xl text-gray-600 font-bold px-4 border-b-2 focus:outline-none "
               value={fromAmount}
               onChange={(v) => setFromAmount(Number(v.target.value))}
             />
 
             <input
               type="number"
-              className="h-24 w-80 bg-transparent m-2 text-3xl text-green-700 pl-8 border-b-2 "
+              className="h-24 w-[70%] bg-transparent m-2 xs:text-2xl sm:text-3xl text-green-700 pl-8 border-b-2 "
               disabled={true}
               value={toAmount}
               onChange={(v) => setToAmount(v)}
@@ -107,11 +107,11 @@ export default function CurrencyConverter() {
 
           {/* convert button div  */}
           <div className="flex flex-col h-38 w-full  mt-4 p-4 items-center justify-center ">
-            <p className="flex items-center justify-center h-8 w-34 bg-blue-900 text-yellow-500 p-3 rounded-sm mb-4">
+            <p className="flex items-center justify-center text-xs sm:text-sm h-8 w-56 sm:w-72 bg-blue-900 text-yellow-500 p-3 rounded-sm mb-4">
               Exchange Rate : {exchangeRates[To.toLowerCase()]} / {from}
             </p>
             <button
-              className="h-14 w-96 mt-2 rounded-lg text-white text-lg font-bold opacity-85 hover:-translate-y-1 
+              className="h-14 w-72 xs:w-80 sm:w-96 mt-2 rounded-lg text-white text-lg font-bold opacity-85 hover:-translate-y-1 
                     hover:opacity-100 active:opacity-40 transition-all duration-200 ease-linear bg-green-400"
               onClick={() => convertAmount()}
             >
@@ -119,7 +119,7 @@ export default function CurrencyConverter() {
             </button>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 }
