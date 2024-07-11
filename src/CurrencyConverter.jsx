@@ -42,11 +42,11 @@ export default function CurrencyConverter() {
     >
       {/* <div className="flex h-[600px] w-[60%] md:w-[70%] items-center justify-center  bg-red-300"> */}
         <div
-          className="h-[100%] lg:h-[550px] w-[100%] lg:w-[60%] flex flex-col gap-14 md:gap-8 items-center bg-white rounded-sm pt-8 border border-white 
+          className="h-[100%] lg:h-[550px] w-[100%] lg:w-[60%] flex flex-col gap:12 sm:gap-6  md:gap-8 items-center bg-white rounded-sm pt-8 border border-white 
           hover:-translate-y-2 transition-all duration-300 ease-linear 
                 "
         >
-          <h1 className=" text-3xl xs:text-4xl text-blue-900  font-extrabold font-ubuntu hover:cursor-pointer">
+          <h1 className=" text-3xl sm:text-4xl  text-blue-900  font-extrabold font-ubuntu hover:cursor-pointer">
             Currency CoNverter
           </h1>
 
